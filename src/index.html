@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- TAILWIND -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- FONT AWSOME ICONS -->
+    <script
+      src="https://kit.fontawesome.com/206351b6e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="scale-150 overflow-hidden flex items-center justify-center min-h-screen bg-gray-900"
+  >
+    <div
+      class="container bg-gray-800 w-fit text-left py-12 px-6 sm:drop-shadow-2xl drop-shadow-xl"
+    >
+      <!-- TITLE -->
+      <div class="title text-white text-xl">
+        <h1 class="font-bold leading-6">
+          Generate a<br />
+          <span class="text-green-400">random password</span>
+        </h1>
+        <h2 class="text-xs mt-1">Never use an insecure password again</h2>
+      </div>
+      <!--// TITLE //-->
+      <!-- GENERATE -->
+      <div class="btn mt-6 flex justify-between sm:justify-evenly pl-2">
+        <button
+          id="generate-btn"
+          class="cursor-pointer bg-green-500 hover:bg-green-600 active:bg-green-700 text-white py-[9px] px-[10px] text-xs rounded-md"
+        >
+          Generate passwords
+        </button>
+
+        <input
+          type="number"
+          id="input"
+          value="8"
+          class="text-center bg-[#273549] text-white rounded-md"
+          min="8"
+          max="20"
+        />
+        <!-- WORK ON LATER (exclude speacial chars) -->
+        <!-- <div class="flex flex-col text-white">
+          <label for="check" class="text-[8px]">Special characters</label>
+          <input type="checkbox" name="" class="mt-2" id="check" checked>
+
+        </div> -->
+      </div>
+      <!--// GENERATE //-->
+      <hr class="mt-5" />
+      <!-- OUTPUT -->
+      <div
+        class="output mt-5 flex flex-col sm:flex-row gap-5 w-full items-center justify-center"
+      >
+        <div class="flex flex-row sm:flex-col items-center">
+          <input
+            id="result-1"
+            type="text"
+            class="bg-[#273549] rounded-md h-8 text-green-400 text-center text-xs"
+            readonly
+          />
+          <!-- copy btn -->
+          <button
+          id="copy-1"
+            class="text-white text-[10px] ml-2 sm:ml-0 mt-0 sm:mt-2 bg-green-600 rounded-md p-1"
+          >
+            <div class="tooltip" id="tooltip-1" data-tip="copy">
+              <i class="fa-regular fa-clipboard mx-1"></i>
+            </div>
+          </button>
+        </div>
+        <div class="flex flex-row sm:flex-col items-center">
+          <input
+            id="result-2"
+            type="text"
+            class="bg-[#273549] rounded-md h-8 text-green-400 text-center text-xs"
+            readonly
+          />
+          <!-- copy btn -->
+          <button
+          id="copy-2"
+            class="text-white text-[10px] ml-2 sm:ml-0 mt-0 sm:mt-2 bg-green-600 rounded-md p-1"
+          >
+            <div class="tooltip" id="tooltip-2" data-tip="copy">
+              <i class="fa-regular fa-clipboard mx-1"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!--// OUTPUT //-->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
