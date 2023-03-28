@@ -29,7 +29,7 @@ function reset(){
 // Copy
 copy_1.addEventListener("focus", ()=>{
 // Get the text field
-  var copyText = document.getElementById("result-1");
+  let copyText = document.getElementById("result-1");
 
   // Select the text field
   copyText.select();
@@ -44,7 +44,7 @@ copy_1.addEventListener("focus", ()=>{
 })
 copy_2.addEventListener("focus", ()=>{
     // Get the text field
-      var copyText = document.getElementById("result-2");
+      let copyText = document.getElementById("result-2");
     
       // Select the text field
       copyText.select();
